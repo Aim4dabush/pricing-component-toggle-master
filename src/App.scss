@@ -1,4 +1,53 @@
+@import "./src/SassVariables/SassVariables.scss";
+
 .App {
-  text-align: center;
+  background-color: $veryLight;
+  font-family: $montserratFont;
+  font-size: $fontSize;
+  height: 100vh;
+  position: relative;
+
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  h1 {
+    color: $dark;
+    font-size: 40px;
+    margin: 0;
+    position: relative;
+    padding: 2em;
+    text-align: center;
+  }
+
+  .top {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
+@media (max-width: $mobile) {
+  .App {
+    height: fit-content;
+    position: relative;
+    width: 100vw;
+
+    .bottom {
+      display: none;
+    }
+
+    h1 {
+      font-size: $fontSize;
+    }
+
+    .top {
+      position: absolute;
+      top: -40px;
+      overflow: hidden;
+      right: -190px;
+    }
+  }
+}

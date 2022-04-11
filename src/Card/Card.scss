@@ -1,0 +1,195 @@
+@import "./src/SassVariables/SassVariables.scss";
+
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: calc(100vh - 210px);
+
+  .list {
+    display: flex;
+
+    .card-container {
+      background-color: white;
+      border-radius: 10px;
+      color: $dark;
+      margin: 0.5em 0;
+      padding: 2rem;
+      text-align: center;
+      width: 400px;
+
+      button {
+        background-image: linear-gradient(to right, $primaryOne, $primaryTwo);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: 700;
+        margin-top: 1em;
+        padding: 1em 0;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 50px;
+        padding: 1em 0;
+      }
+    }
+
+    .card-container:nth-child(1) {
+      align-self: center;
+    }
+
+    .card-container:nth-child(2) {
+      background-image: linear-gradient($primaryOne, $primaryTwo);
+      color: white;
+      height: 525px;
+
+      button {
+        background-image: none;
+        color: $primaryTwo;
+      }
+
+      h1 {
+        color: white;
+      }
+
+      h3 {
+        margin-top: 2em;
+      }
+    }
+
+    .card-container:nth-child(3) {
+      align-self: center;
+    }
+  }
+
+  .toggle {
+    align-items: center;
+    color: $base;
+    gap: 1em;
+    display: flex;
+
+    .switch {
+      display: inline-block;
+      height: 34px;
+      position: relative;
+      width: 60px;
+
+      & input {
+        height: 0;
+        opacity: 0;
+        width: 0;
+      }
+
+      .slider {
+        background-color: $primaryTwo;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: 0.4s;
+
+        &::before {
+          background-color: white;
+          bottom: 4px;
+          content: "";
+          height: 26px;
+          left: 4px;
+          position: absolute;
+          transition: 0.4s;
+          width: 26px;
+        }
+      }
+
+      input:checked + .slider::before {
+        transform: translateX(26px);
+      }
+
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round::before {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .card {
+    height: fit-content;
+    width: 100vw;
+
+    .list {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      .card-container {
+        width: 90%;
+      }
+
+      .card-container:nth-child(3) {
+        height: 100%;
+      }
+    }
+
+    .toggle {
+      align-items: center;
+      color: $base;
+      gap: 1em;
+      display: flex;
+
+      .switch {
+        display: inline-block;
+        height: 34px;
+        position: relative;
+        width: 60px;
+
+        & input {
+          height: 0;
+          opacity: 0;
+          width: 0;
+        }
+
+        .slider {
+          background-color: $primaryTwo;
+          bottom: 0;
+          cursor: pointer;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition: 0.4s;
+
+          &::before {
+            background-color: white;
+            bottom: 4px;
+            content: "";
+            height: 26px;
+            left: 4px;
+            position: absolute;
+            transition: 0.4s;
+            width: 26px;
+          }
+        }
+
+        input:checked + .slider::before {
+          transform: translateX(26px);
+        }
+
+        .slider.round {
+          border-radius: 34px;
+        }
+
+        .slider.round::before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
