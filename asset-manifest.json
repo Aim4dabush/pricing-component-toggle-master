@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pricing-component-toggle-master/static/css/main.aa082df2.css",
+    "main.js": "/pricing-component-toggle-master/static/js/main.0b0137b7.js",
+    "static/js/787.1e33e2c7.chunk.js": "/pricing-component-toggle-master/static/js/787.1e33e2c7.chunk.js",
+    "index.html": "/pricing-component-toggle-master/index.html",
+    "main.aa082df2.css.map": "/pricing-component-toggle-master/static/css/main.aa082df2.css.map",
+    "main.0b0137b7.js.map": "/pricing-component-toggle-master/static/js/main.0b0137b7.js.map",
+    "787.1e33e2c7.chunk.js.map": "/pricing-component-toggle-master/static/js/787.1e33e2c7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa082df2.css",
+    "static/js/main.0b0137b7.js"
+  ]
+}
